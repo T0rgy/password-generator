@@ -33,8 +33,20 @@ function generatePassword() {
     confirmUppercase = confirm("Click OK to confirm if you would like to include uppercase characters");
   }
 
+  if (confirmCharacter) {
+    selectionConfirm = selectionConfirm.concat(character);
+  }
+  if (confirmLowercase) {
+    selectionConfirm = selectionConfirm.concat(alpha);
+  }
+  if (confirmUppercase) {
+    selectionConfirm = selectionConfirm.concat(alpha2);
+  }
+  if (confirmNumber) {
+    selectionConfirm = selectionConfirm.concat(number);
+  }
 
-  
+
 };
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
