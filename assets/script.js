@@ -29,7 +29,7 @@ function generatePassword() {
 
   //Incase user doesn't select proper input
   while (!confirmCharacter && !confirmNumber && !confirmLowercase && !confirmUppercase) {
-    alert ("You must choose OK or Cancel for no.")
+    alert ("You must choose at least one of the selections")
     confirmCharacter = confirm("Click OK to confirm if you would like to include special characters");
     confirmNumber = confirm("Click OK to confirm if you would like to include numeric characters");    
     confirmLowercase = confirm("Click OK to confirm if you would like to include lowercase characters");
