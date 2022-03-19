@@ -46,6 +46,12 @@ function generatePassword() {
     selectionConfirm = selectionConfirm.concat(number);
   }
 
+  for (var i = 0; i < confirmLength; i++) {
+    randomPassword = randomPassword + selectionConfirm[Math.floor(Math.random() * selectionConfirm.length)];
+    console.log(randomPassword)
+  }
+
+  return randomPassword;
 
 };
 // Get references to the #generate element
