@@ -1,4 +1,5 @@
 // Assignment code here
+//Global variables
 var character = ["!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "-", "_", "+", "=", "?", "/", ";", "<", ">"];
 var number = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
 var alpha = ["a", "b", "c", "d", "e", 'f', 'g', 'h', 'i', 'j', "k", 'l', 'm', "n", "o", "p", "q", "r", "s", "t", 'u', "v", "w", "x", "y", "z"];
@@ -9,12 +10,13 @@ var confirmCharacter;
 var confirmLowercase;
 var confirmUppercase;
 var confirmNumber;
-var selectionConfirm = [];
-var randomPassword = "";
 
+
+//function to generate password
 function generatePassword() {
   var confirmLength = (prompt("How many characters would you like your password to contain?"));
 
+  //User Input for length
   while (confirmLength < 8 || confirmLength > 128) {
     alert ("Password length must be between 8-128 characters, try again");
     var confirmLength = (prompt("How many characters would you like your password to contain?"));
@@ -25,6 +27,7 @@ function generatePassword() {
   confirmLowercase = confirm("Click OK to confirm if you would like to include lowercase characters");
   confirmUppercase = confirm("Click OK to confirm if you would like to include uppercase characters");
 
+  //Incase user doesn't select proper input
   while (!confirmCharacter && !confirmNumber && !confirmLowercase && !confirmUppercase) {
     alert ("You must choose OK or Cancel for no.")
     confirmCharacter = confirm("Click OK to confirm if you would like to include special characters");
@@ -33,6 +36,10 @@ function generatePassword() {
     confirmUppercase = confirm("Click OK to confirm if you would like to include uppercase characters");
   }
 
+
+  var selectionConfirm = [];
+
+  //letting function know what was selected
   if (confirmCharacter) {
     selectionConfirm = selectionConfirm.concat(character);
   }
@@ -46,6 +53,9 @@ function generatePassword() {
     selectionConfirm = selectionConfirm.concat(number);
   }
 
+  var randomPassword = "";
+
+  //Picking random characters from array
   for (var i = 0; i < confirmLength; i++) {
     randomPassword = randomPassword + selectionConfirm[Math.floor(Math.random() * selectionConfirm.length)];
     console.log(randomPassword)
