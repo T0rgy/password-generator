@@ -8,3 +8,4 @@ HTML, CSS, JavaScript
 ![image](./assets/screenshot.png)
 
 # Deployment link
+https://t0rgy.github.io/password-generator/
