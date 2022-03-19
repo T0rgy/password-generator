@@ -12,6 +12,30 @@ var confirmNumber;
 var selectionConfirm = [];
 var randomPassword = "";
 
+function generatePassword() {
+  var confirmLength = (prompt("How many characters would you like your password to contain?"));
+
+  while (confirmLength < 8 || confirmLength > 128) {
+    alert ("Password length must be between 8-128 characters, try again");
+    var confirmLength = (prompt("How many characters would you like your password to contain?"));
+  }
+
+  confirmCharacter = confirm("Click OK to confirm if you would like to include special characters");
+  confirmNumber = confirm("Click OK to confirm if you would like to include numeric characters");    
+  confirmLowercase = confirm("Click OK to confirm if you would like to include lowercase characters");
+  confirmUppercase = confirm("Click OK to confirm if you would like to include uppercase characters");
+
+  while (!confirmCharacter && !confirmNumber && !confirmLowercase && !confirmUppercase) {
+    alert ("You must choose OK or Cancel for no.")
+    confirmCharacter = confirm("Click OK to confirm if you would like to include special characters");
+    confirmNumber = confirm("Click OK to confirm if you would like to include numeric characters");    
+    confirmLowercase = confirm("Click OK to confirm if you would like to include lowercase characters");
+    confirmUppercase = confirm("Click OK to confirm if you would like to include uppercase characters");
+  }
+
+
+  
+};
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
 
