@@ -3,3 +3,8 @@ A password generator that prompts for user input on what characters they would l
 
 # File types
 HTML, CSS, JavaScript
+
+# Screenshot
+![image](./assets/screenshot.png)
+
+# Deployment link
