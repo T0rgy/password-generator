@@ -58,7 +58,6 @@ function generatePassword() {
   //Picking random characters from array
   for (var i = 0; i < confirmLength; i++) {
     randomPassword = randomPassword + selectionConfirm[Math.floor(Math.random() * selectionConfirm.length)];
-    console.log(randomPassword)
   }
 
   return randomPassword;
